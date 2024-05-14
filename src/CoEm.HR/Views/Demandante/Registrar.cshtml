@@ -1,0 +1,58 @@
+@model CoEm.HR.Models.DemandanteViewModel
+
+@{
+    ViewData["Title"] = "Registrar Demandante";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Formulario de Registro</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Registrar" method="post">
+                        <div class="form-group">
+                            <label asp-for="Email">Correo Electrónico</label>
+                            <input asp-for="Email" class="form-control" type="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Clave">Contraseña</label>
+                            <input asp-for="Clave" class="form-control" type="password" required />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Nombre">Nombre Completo</label>
+                            <input asp-for="Nombre" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Telefono">Teléfono</label>
+                            <input asp-for="Telefono" class="form-control" type="number" maxlength="10" required />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Direccion">Dirección</label>
+                            <input asp-for="Direccion" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="FechaNacimiento">Fecha de Nacimiento</label>
+                            <input asp-for="FechaNacimiento" class="form-control" type="date" required />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="NivelEducacion">Nivel de Educación</label>
+                            <input asp-for="NivelEducacion" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ExperienciaLaboral">Experiencia Laboral</label>
+                            <textarea asp-for="ExperienciaLaboral" class="form-control" style="height: 250px;" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Registrar Demandante</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
